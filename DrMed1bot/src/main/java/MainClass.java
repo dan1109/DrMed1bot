@@ -7,11 +7,11 @@ public class MainClass {
         ApiContextInitializer.init();
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
         try {
-        	DrMed1bot d= new DrMed1bot();//così posso caricare gli utenti senza un update
+        	DrMed1bot d= new DrMed1bot();//cosÃ¬ posso caricare gli utenti senza un update
             telegramBotsApi.registerBot(d);//ora posso registare il bot
             
 //            telegramBotsApi.registerBot(new DirectionsHandlers());
-//            telegramBotsApi.registerBot(new RaeHandlers());
+//            telegramBotsApi.registerBot(new RaeHandlers()); // utf8
 //            telegramBotsApi.registerBot(new WeatherHandlers());
 //            telegramBotsApi.registerBot(new TransifexHandlers());
 //            telegramBotsApi.registerBot(new FilesHandlers());
