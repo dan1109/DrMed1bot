@@ -7,7 +7,7 @@ public class Orari_Medicina implements java.io.Serializable{
 	 * default id per la serializzazione
 	 */
 	private static final long serialVersionUID = 1L;
-	private ArrayList<LocalTime> orario_medicine= new ArrayList<LocalTime>() ; //fasce orarie di una medicina
+	private ArrayList<LocalTime> orario_medicine= new ArrayList<LocalTime>() ; //fasce orarie di una medicina 
 
 	/**
 	 * restituisce tutto l'orario di una certa pos
@@ -66,7 +66,7 @@ public class Orari_Medicina implements java.io.Serializable{
 	 * @param pos
 	 */
 	public void setOr_med_pos(LocalTime o,int pos) {
-		if(pos>=0 && pos<this.orario_medicine.size())//se è una posizione legittima
+		if(pos>=0 && pos<this.orario_medicine.size())//se Ã¨ una posizione legittima
 		{
 			this.orario_medicine.set(pos,o);//modifica l'orario
 		}
@@ -113,7 +113,7 @@ public class Orari_Medicina implements java.io.Serializable{
 	}
 	
 	/**
-	 * elimina un orario specifico se è stato inserito
+	 * elimina un orario specifico se Ã¨ stato inserito
 	 * @param o
 	 * @param pos
 	 */
