@@ -49,7 +49,7 @@ public class DrMed1bot extends TelegramLongPollingBot {
         	case"/terminate"://solo per il debug errore d'istanza
        		System.exit(0);//esci
        		break;
-        	case"/memoorarifarmaco"://è come se chiamasse anche il comando di stampa lista farmaci
+        	case"/memoorarifarmaco"://Ã¨ come se chiamasse anche il comando di stampa lista farmaci
        		message.setText("Specificare il numero relativo al farmaco memorizzato e gli orari di assunzione dello stesso separati entrambi da - e gli orari fra loro da , e ore e minuti di un orario nel formato HH:mm \nesempio: 1-18:30,11:30\n"+Utente.print_farmaci(utenti, new_id));
        		break;
             case"/printfarmaci":
@@ -112,7 +112,7 @@ public class DrMed1bot extends TelegramLongPollingBot {
      * -2 :send cmd /prmemo
      * -3 :send messaggio d'errore cmd
      * -4 :send conferma dopo chiamata /prmemo
-     * -5 :send conferma dopo /memoFarmaci
+     * -5 :send conferma dopo /memoFarmacia
      * 
      * @param scegli
      */
@@ -120,7 +120,7 @@ public class DrMed1bot extends TelegramLongPollingBot {
     {
     	switch (scegli){
     	case 0:
-        	message.setText("Inserire farmaci da assumere:\nPer inserirne di più usa la virgola\nesempio: Tachipirina,Oki");
+        	message.setText("Inserire farmaci da assumere:\nPer inserirne di piÃ¹ usa la virgola\nesempio: Tachipirina,Oki");
         	break;
     	case 1:        	
             message.setText("Lista dei comandi:\n/annulla - annulla l'inserimento di un comando\n/deletefarmaci - specifica i farmaci da rimuovere \n(usare prima /printfarmaci per vedere chi cancellare) \n/printorarifarmaci - Stampa gli orari di tutti i farmaci \n/memoorarifarmaco - memorizza gli orari di un farmaco\n/printfarmaci - stampa i farmaci inseriti \n/memofarmaci - memorizza le medicine \n");
@@ -190,7 +190,7 @@ public class DrMed1bot extends TelegramLongPollingBot {
     }
 
     /**
-     * l'unica cosa che può cambiare se si ricrea un bot con lo stesso nome
+     * l'unica cosa che puÃ² cambiare se si ricrea un bot con lo stesso nome
      */
     public String getBotToken() {
         return "775702801:AAF5r76mFXPVSPAx5Fjz7uO8LTYZOZhrzy8";
