@@ -12,12 +12,12 @@ import java.util.Collections;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 /**
- * un utente è composto da:
+ * un utente Ã¨ composto da:
  * id -user
  * comando precedente - prev_cm
  * una lista di medicine - medicine
  * l'orarrio di assunzione - orario_medicine
- * 
+ *   
  * per il debug prova
  * @author bufal
  *
@@ -68,7 +68,7 @@ public class Utente implements java.io.Serializable{
 	{
 		int i=0;
 		boolean find=false;
-		while(i<u1.size())//finchè la lista non è vuota
+		while(i<u1.size())//finchÃ¨ la lista non Ã¨ vuota
 		{
 			if(u1.get(i).id==id_2)//verifica se gli id sono uguali
 			{
@@ -165,7 +165,7 @@ public class Utente implements java.io.Serializable{
 	/**
 	 * restituisce la posizione di dove sta il mio id
 	 * 
-	 * negativo se non c'è
+	 * negativo se non c'Ã¨
 	 * 
 	 * @param u1
 	 * @param id_2
@@ -206,7 +206,7 @@ public class Utente implements java.io.Serializable{
 			array_appoggio[i]=array_appoggio[i].trim();//poi si elimina lo spazi in eccesso (lascia 1 per parola)
 			if(array_appoggio[i].startsWith(" "))//se il farmaco inizia con uno spazio(digitazione in errore " ciao")
 			{
-				array_appoggio[i]=array_appoggio[i].replaceFirst(" ", null);//togli il primo spazio se c'è
+				array_appoggio[i]=array_appoggio[i].replaceFirst(" ", null);//togli il primo spazio se c'Ã¨
 			}
 			i++;
 		}
@@ -237,7 +237,7 @@ public class Utente implements java.io.Serializable{
 			array_appoggio[i]=array_appoggio[i].trim();//poi si elimina lo spazi in eccesso (lascia 1 per parola)
 			if(array_appoggio[i].startsWith(" "))//se il farmaco inizia con uno spazio(digitazione in errore " ciao")
 			{
-				array_appoggio[i]=array_appoggio[i].replaceFirst(" ", null);//togli il primo spazio se c'è
+				array_appoggio[i]=array_appoggio[i].replaceFirst(" ", null);//togli il primo spazio se c'Ã¨
 			}
 			i++;
 		}
@@ -270,7 +270,7 @@ public class Utente implements java.io.Serializable{
 		final int pos_farmaco = Integer.parseInt(array_appoggio2[0])-1; //se la lista vista dall'utente parte da 1 a n devo sottrarre un valore per programmare
 		final int pos_id= Utente.get_pos_id(u1,id);
 	
-		if(pos_farmaco>=0 && pos_farmaco<u1.get(pos_id).medicine.size())//se la posizione del farmaco è legit
+		if(pos_farmaco>=0 && pos_farmaco<u1.get(pos_id).medicine.size())//se la posizione del farmaco Ã¨ legit
 		{
 			String [] array_appoggio= array_appoggio2[1].split(split_char);//esempio:(18:30,11:30) -> (18:30),(11:30) splitto per ,
 			
@@ -279,7 +279,7 @@ public class Utente implements java.io.Serializable{
 			{
 				if(array_appoggio[i].startsWith(" "))//se il farmaco inizia con uno spazio(digitazione in errore " 18:30")
 				{
-					array_appoggio[i]=array_appoggio[i].replaceFirst(" ", null);//togli il primo spazio se c'è
+					array_appoggio[i]=array_appoggio[i].replaceFirst(" ", null);//togli il primo spazio se c'Ã¨
 				}
 				i++;
 			}
@@ -291,8 +291,8 @@ public class Utente implements java.io.Serializable{
 				list_appoggio.add(Orari_Medicina.StringToLocalTime(array_appoggio[i]));//aggiunge un oggetto localtime dalla stringa "18:30",per ogni orario
 				i++;
 			}
-			array_appoggio2=null;//non serve più
-			array_appoggio=null;//non serve più
+			array_appoggio2=null;//non serve piÃ¹
+			array_appoggio=null;//non serve piÃ¹
 		
 			list_appoggio.removeAll(Collections.singletonList(null));//rimuove tutti gli orari null della lista (sono null se avevi inserito un'orario sbagliato)
 			
@@ -303,7 +303,7 @@ public class Utente implements java.io.Serializable{
 				i++;
 			}	
 			
-			list_appoggio=null;//anche questo non mi serve più
+			list_appoggio=null;//anche questo non mi serve piÃ¹
 			i=0;
 			int size=u1.get(pos_id).orario_medicine.get(pos_farmaco).get_size_farmaco();
 			String [] ora = new String[size];//alloca un vettore statico pari al numero di orari del farmaco		
@@ -313,7 +313,7 @@ public class Utente implements java.io.Serializable{
 				i++;
 			}
 			Contatore c = new Contatore();
-			c.Time(id, u1.get(pos_id).medicine.get(pos_farmaco), LocalTimeToArrayString(u1,pos_id,pos_farmaco));//ora è un array temporaneo di String
+			c.Time(id, u1.get(pos_id).medicine.get(pos_farmaco), LocalTimeToArrayString(u1,pos_id,pos_farmaco));//ora Ã¨ un array temporaneo di String
 		}
 	}
 	
@@ -445,7 +445,7 @@ public class Utente implements java.io.Serializable{
 			ArrayList<Utente> u2= new ArrayList<Utente>();		//struttura di passaggio
 			
 			// Deserialization
-			File tempFile = new File(path);//verifica il percorso assoluto dov'è salvato il file
+			File tempFile = new File(path);//verifica il percorso assoluto dov'Ã¨ salvato il file
 			boolean exists = tempFile.exists();
 			if(exists==true)//solo se esiste il file lo carichi,altrimenti u2 resta vuoto
 			{
