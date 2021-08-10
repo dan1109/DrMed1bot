@@ -11,6 +11,7 @@ public class Orari_Medicina implements java.io.Serializable{
 
 	/**
 	 * restituisce tutto l'orario di una certa pos
+	 test commit from Ipad copy
 	 * @param pos
 	 * @return
 	 */
