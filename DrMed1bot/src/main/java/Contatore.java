@@ -9,6 +9,9 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+//why dont save ?
+
+
 
 public class Contatore extends TelegramLongPollingBot {
     public void Time(final long id, String farmaco, String[] ora){
